@@ -1,0 +1,57 @@
+ "type": "line",
+  "data": {
+    "labels": [1.5, 1.52, 1.54, 1.56, 1.58, 1.60, 1.618, 1.62, 1.64, 1.66, 1.68, 1.70],
+    "datasets": [{
+      "label": "η_extrap (Anomalous Dimension)",
+      "data": [0.92, 0.89, 0.87, 0.84, 0.82, 0.81, 0.809, 0.81, 0.83, 0.86, 0.89, 0.92],
+      "borderColor": "#FFD700",
+      "backgroundColor": "rgba(255, 215, 0, 0.1)",
+      "fill": true,
+      "tension": 0.4
+    }, {
+      "label": "Variance (Error Band)",
+      "data": [0.015, 0.013, 0.011, 0.009, 0.007, 0.005, 0.003, 0.005, 0.007, 0.009, 0.011, 0.013],
+      "borderColor": "#FF6B6B",
+      "backgroundColor": "rgba(255, 107, 107, 0.1)",
+      "fill": false,
+      "yAxisID": "y1"
+    }]
+  },
+  "options": {
+    "responsive": true,
+    "scales": {
+      "x": {
+        "title": { "display": true, "text": "φ Perturbation Parameter" }
+      },
+      "y": {
+        "title": { "display": true, "text": "η_extrap" },
+        "min": 0.7,
+        "max": 1.0
+      },
+      "y1": {
+        "type": "linear",
+        "display": true,
+        "position": "right",
+        "title": { "display": true, "text": "Variance" },
+        "min": 0,
+        "max": 0.02,
+        "grid": { "drawOnChartArea": false }
+      }
+    },
+    "plugins": {
+      "title": { "display": true, "text": "φ-Scan: Anomalous Dimension Cusp at Golden Ratio" },
+      "annotation": {
+        "annotations": {
+          "phi": {
+            "type": "line",
+            "xMin": 1.618,
+            "xMax": 1.618,
+            "borderColor": "#4ECDC4",
+            "borderWidth": 2,
+            "label": { "content": "φ ≈ 1.618 (Fixed Point)", "enabled": true }
+          }
+        }
+      }
+    }
+  }
+}
